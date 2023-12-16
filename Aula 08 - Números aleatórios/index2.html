@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+    <div id="labels-container">
+        <label id="xlabel">0</label>
+        <label id="ylabel">0</label>
+        <label id="zlabel">0</label>
+    </div>
+    <button type="button" id="rollbtn">Random</button>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #labels-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            font-size: 50px;
+            margin: 5px;
+        }
+
+        #rollbtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+
+    <script>
+        let x1;
+        let y;
+        let z;
+
+        document.getElementById("rollbtn").onclick = function () {
+            let x = Math.floor(Math.random() * 6) + 1;
+            let y = Math.floor(Math.random() * 6) + 1;
+            let z = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("xlabel").innerHTML = x
+            document.getElementById("ylabel").innerHTML = y
+            document.getElementById("zlabel").innerHTML = z
+        }
+    </script>
+</body>
+
+</html>
