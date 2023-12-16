@@ -1,0 +1,1 @@
+slice() - Extrai uma sessão de uma string e retorna para uma nova string sem modificar a string original
