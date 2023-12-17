@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- HTML -->
+    <label for="myCheckBox">Inscreva-se</label>
+    <input type="checkbox" id="myCheckBox"><br>
+    <button id="myButton">Salvar</button>
+
+    <!-- CSS -->
+    <style></style>
+
+    <!-- Script -->
+    <script>
+
+        document.getElementById("myButton").onclick = function () {
+            if (document.getElementById("myCheckBox").checked) {
+                console.log("Você está inscrito!")
+            }
+            else {
+                console.log("Você não está inscrito!")
+            }
+
+        }
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>

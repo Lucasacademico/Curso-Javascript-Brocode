@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HTML -->
+    <label for="myCheckBox">Inscreva-se</label>
+    <input type="checkbox" id="myCheckBox"><br>
+
+    <label for="visaBtn">Visa</label>
+    <input type="radio" name="card" id="visaBtn">
+    <label for="mastercardBtn">Mastercard</label>
+    <input type="radio" name="card" id="mastercardBtn">
+    <label for="paypalBtn">Paypal</label>
+    <input type="radio" name="card" id="paypalBtn"><br>
+
+    <button id="myButton">Salvar</button>
+
+
+
+    <!-- CSS -->
+    <style></style>
+
+    <!-- Script -->
+    <script>
+        document.getElementById("myButton").onclick = function () {
+
+            const myCheckBox = document.getElementById("myCheckBox")
+            const visaBtn = document.getElementById("visaBtn")
+            const mastercardBtn = document.getElementById("mastercardBtn")
+            const paypalBtn = document.getElementById("paypalBtn")
+
+            if (myCheckBox.checked) {
+                console.log("Você está inscrito!")
+            }
+            else {
+                console.log("Você não está inscrito!")
+            }
+
+            if (visaBtn.checked) {
+                console.log("Você esta pagando com visa!")
+            }
+            else if (mastercardBtn.checked) {
+                console.log("Você esta pagando com mastercard!")
+            }
+            else if (paypalBtn.checked) {
+                console.log("Você esta pagando com paypal!")
+            }
+            else {
+                console.log("Você não selecionou método de pagamento!")
+            }
+
+        }
+    </script>
+</body>
+
+</html>
