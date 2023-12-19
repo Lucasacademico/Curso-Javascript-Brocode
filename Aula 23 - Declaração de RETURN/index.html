@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*Variaveis primarias*/
+        let area;
+        let width;
+        let height;
+
+        /*Leitura de dados*/
+        width = window.prompt("Insira a largura: ");
+        height = window.prompt("Insira a altura: ");
+
+        /*Declarando a função para uma var*/
+        area = getArea(width, height);
+
+        /*Imprimindo o resultado final*/
+        console.log("A área é : ", area)
+
+        /*Função com propriedades e retorno de calculo da função*/
+        function getArea(width, height) {
+            let result = width * height;
+            return result;
+        }
+    </script>
+</body>
+
+</html>
