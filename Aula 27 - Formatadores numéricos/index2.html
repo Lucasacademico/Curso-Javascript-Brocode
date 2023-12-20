@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myNum = 123546.789;
+
+        /*Formato americano*/
+        let formatedUS = myNum.toLocaleString("en-US")
+        console.log(formatedUS)
+
+        // Formato da india
+        let formatedIN = myNum.toLocaleString("hi-IN")
+        console.log(formatedIN)
+
+        // Formato Brasileiro
+        let formatedBR = myNum.toLocaleString("pt-BR")
+        console.log(formatedBR)
+
+        // Formato Alemão
+        let formatedDE = myNum.toLocaleString("de-DE")
+        console.log(formatedDE)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myNum = 123546.789;
+
+        /*Formatando para moeda americada*/
+        let formatedCurrencyUSA = myNum.toLocaleString("en-US", { style: "currency", currency: "USD" });
+
+        /*Formatando para moeda Indiana*/
+        let formatedCurrencyIN = myNum.toLocaleString("hi-IN", { style: "currency", currency: "INR" });
+
+        let formatedCurrencyDE = myNum.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+
+        console.log(formatedCurrencyUSA)
+        console.log(formatedCurrencyIN)
+        console.log(formatedCurrencyDE)
+
+    </script>
+</body>
+
+</html>

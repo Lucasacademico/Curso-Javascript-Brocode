@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myNum = 123546.789;
+
+        /*Formato americano*/
+        let formatedUS = myNum.toLocaleString("en-US")
+        console.log(formatedUS)
+
+        // Formato da india
+        let formatedIN = myNum.toLocaleString("hi-IN")
+        console.log(formatedIN)
+
+        // Formato Brasileiro
+        let formatedBR = myNum.toLocaleString("pt-BR")
+        console.log(formatedBR)
+
+        // Formato Alemão
+        let formatedDE = myNum.toLocaleString("de-DE")
+        console.log(formatedDE)
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    "Format currency" em JavaScript refere-se a uma técnica ou função utilizada para formatar valores numéricos para exibição como uma representação de moeda. Isso é particularmente útil ao exibir quantidades de dinheiro ou valores financeiros em um formato específico de moeda, com símbolos, separadores de milhares, e precisão decimal adequada.
+
+    Algumas funções:
+    - toLocaleString() é um método em JavaScript que pertence ao objeto Number, usado para retornar uma representação de string do número atual de acordo com as configurações regionais do usuário, como idioma e formato de números
+
+    sintaxe:
+    - .toLocaleString(locale, {options});
+
+
+ -->
