@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let frutas = ["manga", "maçã", "laranja", "banana", "melancia"];
+
+        // remove o ultimo elemento do array
+        frutas.pop()
+
+        // remove o primeiro elemento do array
+        frutas.shift();
+
+        // verifica o tamanho do array
+        let tamanho = frutas.length;
+
+        // Iprimindo o index dos valores
+        let index = frutas.indexOf("maçã")
+        let index2 = frutas.indexOf("laranja")
+        let index3 = frutas.indexOf("kiwi") //Valor inexistente retorna: -1
+
+        console.log("Tamanho:", tamanho)
+        console.log(frutas)
+        console.log(index)
+        console.log(index2)
+        console.log(index3)
+
+    </script>
+</body>
+
+</html>
