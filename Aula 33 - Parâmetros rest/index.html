@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Os "rest parameters" (parâmetros rest) em JavaScript permitem que uma função aceite um número indefinido de argumentos como um array. Esse recurso é representado pelo operador de três pontos (...) seguido do nome do parâmetro, colocado como o último parâmetro na definição de uma função. -->
+
+<body>
+
+    <script>
+        // Demonstrativo simples de criação de funções sem parametros rest com valores finitos
+        let a = 1
+        let b = 2
+        let c = 3
+        let d = 4
+        let e = 5
+
+        console.log(soma2(c, d, a))
+        console.log(soma(c, e))
+
+
+        function soma(x, y) {
+            return x + y
+        }
+
+        function soma2(x, y, z) {
+            return x + y + z
+        }
+
+        // Perceba que se eu quiser somar valores separados, devo ficar criando novas funções, pois toda função nestes exemplos precisam de uma quantidade de valores pra soma, caso eu queira somar 3 elementos e não 2, então precisei criar uma nova função, porém isso polui a tela com multiplas funções pra mesma funcionalidade.
+
+    </script>
+</body>
+
+</html>

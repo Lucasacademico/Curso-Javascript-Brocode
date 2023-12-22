@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = 1
+        let b = 2
+        let c = 3
+        let d = 4
+        let e = 5
+        
+        console.log(soma(a, b, c, d, e, 10, 65))
+
+        // Estrutura de função para receber infinitos argumentos para soma
+        function soma(...numeros) {
+            let total = 0
+            for (let numero of numeros) {
+                total += numero
+            }
+            return total
+        }
+
+    </script>
+</body>
+
+</html>
