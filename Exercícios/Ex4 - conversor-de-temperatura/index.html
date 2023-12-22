@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>Enter a temperature:</label><br>
+    <input type="text" id="inputText"><br>
+
+    <label>Convert to:</label><br>
+    <input type="radio" id="celcius">
+    <label for="">Celcius</label><br>
+    <input type="radio" id="fahrenheit">
+    <label for="">Fahrenheit</label><br>
+    <button type="button" id="submitBtn">submit</button><br>
+    <label id="tempLabel"></label>
+
+    <script>
+
+        let temp = 66;
+
+        /*testando*/
+        console.log(toCelsius(temp))
+        console.log(toFahrenheit(temp))
+
+        function toCelsius(temp) {
+            return (temp - 32) * (5 / 9);
+        }
+
+        function toFahrenheit(temp) {
+            return temp * 9 / 5 + 32
+        }
+
+
+    </script>
+</body>
+
+</html>
