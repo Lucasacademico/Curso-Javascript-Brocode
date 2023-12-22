@@ -13,14 +13,14 @@
 
         estudantes.forEach(capitalize)
 
-        // Imprimindo cada elemento da matriz estudante
+        // Imprimindo cada elemento da matriz estudante com a primeira letra em maiscula
         estudantes.forEach(displayConsole)
-   
+
         function capitalize(elemento, index, array) {
             array[index] = elemento[0].toUpperCase() + elemento.substring(1);
         }
 
-        function displayConsole(elemento){
+        function displayConsole(elemento) {
             console.log(elemento)
         }
     </script>
