@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 
+Em JavaScript, um callback é uma função que é passada como argumento para outra função e é executada após a conclusão de uma operação assíncrona ou em resposta a um evento específico. -->
+
+<body>
+
+    <label for="" id="myLabel"></label>
+
+    <script>
+
+        //Invocando a função soma, e outra função dentro do argumento
+        soma(2, 3, displayDOM)
+        soma(2, 3, displayConsole)
+
+        // Criado um argumento na função para que receba uma função como argumento e execute essa outra função dentro dessa função soma
+        function soma(x, y, callback) {
+            let result = x + y
+            callback(result)
+        }
+
+        function displayConsole(output) {
+            console.log(output)
+        }
+
+        function displayDOM(output) {
+            document.getElementById("myLabel").innerHTML = output
+        }
+    </script>
+</body>
+
+</html>
