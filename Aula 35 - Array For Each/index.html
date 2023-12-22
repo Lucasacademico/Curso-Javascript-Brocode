@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- O método forEach() em JavaScript é uma maneira de iterar sobre os elementos de um array e executar uma função para cada um deles. Ele é útil quando você deseja executar uma operação em cada item do array sem a necessidade de criar explicitamente um loop for ou while. -->
+    <script>
+        let estudantes = ["bob esponja", "patrick", "lula molusco"]
+
+        //Aqui, o forEach() é usado para percorrer cada elemento do array estudantes e chamar a função capitalize para cada um desses elementos.
+        estudantes.forEach(capitalize)
+
+        // Função que recebe 3 argumentos para alterar o primeiro char de um elemento do array para maiusculo e depois somar com o restante da string   
+        function capitalize(elemento, index, array) {
+            array[index] = elemento[0].toUpperCase() + elemento.substring(1);
+        }
+
+        console.log(estudantes[0])
+        console.log(estudantes[1])
+        console.log(estudantes[2])
+    </script>
+</body>
+
+</html>
