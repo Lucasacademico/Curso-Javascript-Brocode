@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let frutas = ["maçãs", "laranjas", "bananas"]
+        let vegetais = ["cenouras", "cebolas", "batatas"]
+        let proteinas = ["ovos", "frango", "peixe"]
+
+        // Matriz que recebe matrizes
+        let compras = [frutas, vegetais, proteinas]
+
+        // O for externo acessa só as matrizes dentro da matriz compras (sem os elementos)
+        // O for interno acessar os elementos da matriz dentro da matriz compras
+        //OBS: Array = Matriz
+        for (let lista of compras) {
+            for (let alimentos of lista) {
+                console.log(alimentos)
+            }
+        }
+    </script>
+</body>
+
+</html>

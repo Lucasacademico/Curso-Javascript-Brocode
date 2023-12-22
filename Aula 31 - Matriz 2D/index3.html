@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let frutas = ["maçãs", "laranjas", "bananas"]
+        let vegetais = ["cenouras", "cebolas", "batatas"]
+        let proteinas = ["ovos", "frango", "peixe"]
+
+        let compras = [frutas, vegetais, proteinas]
+
+        // Alterando valores de elementos
+
+        // alterando 'peixe' para 'camarão'
+        compras[2][2] = "camarão"
+
+        for (let lista of compras) {
+            for (let alimentos of lista) {
+                console.log(alimentos)
+            }
+        }
+    </script>
+</body>
+
+</html>
