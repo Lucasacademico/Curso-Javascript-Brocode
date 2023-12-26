@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // Código que organiza os valores em ordem decrescente
+        let grades = [100, 50, 90, 60, 80, 70]
+
+        grades = grades.sort(descendingSort)
+
+        grades.forEach(print)
+
+        function descendingSort(x, y) {
+            return y - x
+        }
+
+        function print(elemento) {
+            console.log(elemento);
+        }
+
+        /*
+        Explicando o código:
+        -  Criado array simples com 6 valores diferentes
+        - criado função descendingSort() que caso resultado seja negativo y fica ANTES de x, e caso seja positivo, y fica DEPOIS de x
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Código que organiza os valores em ordem crescente
+        let grades = [100, 50, 90, 60, 80, 70]
+
+        grades = grades.sort(ascendingSort)
+
+        grades.forEach(print)
+
+        // Alterada ordem de x e y
+        function ascendingSort(x, y) {
+            return x - y
+        }
+
+        function print(elemento) {
+            console.log(elemento);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
