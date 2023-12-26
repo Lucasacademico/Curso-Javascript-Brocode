@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Outro exemplo mais avançado de array filter
+        let ages = [18, 16, 21, 17, 19, 90]
+        let adults = ages.filter(checkAge);
+
+        adults.forEach(print)
+
+        //Função para retornar valores maiores que 18
+        function checkAge(elemento) {
+            return elemento >= 18
+        }
+
+        // Função para printar saida
+        function print(elemento) {
+            console.log(elemento);
+        }
+
+    </script>
+</body>
+
+</html>
