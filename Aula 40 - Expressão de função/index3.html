@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count = 0
+
+        function increaseCount() {
+            count = count + 1
+            document.getElementById("myLabel").innerHTML = count
+        }
+        function decreaseCount() {
+            count = count - 1
+            document.getElementById("myLabel").innerHTML = count
+        }
+    </script>
+</head>
+
+<body>
+    <label id="myLabel">0</label><br>
+    <!-- Os eventos 'onclick' são ativados quando os botões são clicados, eventos estes especificados no código JS. -->
+    <button id="decreaseBtn" onclick="decreaseCount()">decrease</button>
+    <button id="increaseBtn" onclick="increaseCount()">increase</button>
+</body>
+
+</html>
