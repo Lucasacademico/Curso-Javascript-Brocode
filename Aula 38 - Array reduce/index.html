@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- O método reduce() em JavaScript é usado para reduzir um array a um único valor. Ele executa uma função de callback em cada elemento do array, resultando em um único valor de retorno. -->
+
+<body>
+    <script>
+        // Exemplo simples de reduce
+        let numbers = [1, 2, 3, 4, 5];
+
+        let sum = numbers.reduce((accumulator, currentValue) => {return accumulator + currentValue}, 0);
+
+        console.log(sum); // Saída: 15 (1 + 2 + 3 + 4 + 5 = 15)
+
+        /*Explicando o código:
+            - Array number simples criado
+            - criado variavel soma recebendo o array com função 'reduce'.
+                > na função 'reduce' temos dois parametros para receberem as somas de cada valor do array
+                > o retorno é justamente é soma de cada valor do array para chegar no resultado final
+                > O valor '0' é o valor inicial do 'accumulator' para ir somando os valores do array
+        */
+
+    </script>
+</body>
+
+</html>

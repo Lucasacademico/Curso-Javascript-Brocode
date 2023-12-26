@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Exemplo 2
+        let precos = [5, 10, 15, 20, 25]
+        let total = precos.reduce(checkOut)
+
+        console.log(`O total é: R$${total}`)
+
+        function checkOut(total, elemento) {
+            return total + elemento
+        }
+    </script>
+</body>
+
+</html>
