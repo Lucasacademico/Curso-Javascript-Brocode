@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Em JavaScript, um objeto é uma estrutura de dados que permite armazenar coleções de pares de chave/valor. É uma entidade que pode conter propriedades e métodos, onde cada propriedade é uma associação entre um nome (também conhecido como chave) e um valor. -->
+    <script>
+        // Exemplo simples de um objeto
+        // Criando um objeto vazio
+        let pessoa = {};
+
+        // Adicionando propriedades ao objeto
+        pessoa.nome = 'João';
+        pessoa.idade = 30;
+        pessoa.trabalho = 'Desenvolvedor';
+
+        // Acessando propriedades do objeto
+        console.log(pessoa.nome); // Saída: João
+        console.log(pessoa['idade']); // Saída: 30
+
+        // Definindo métodos para o objeto
+        pessoa.cumprimentar = function () {
+            console.log('Olá, eu sou ' + this.nome + '!');
+        };
+
+        // Chamando um método do objeto
+        pessoa.cumprimentar(); // Saída: Olá, eu sou João!
+
+    </script>
+</body>
+
+</html>

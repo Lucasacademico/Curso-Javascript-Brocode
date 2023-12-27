@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Criando multiplos objetos
+        const carro1 = {
+            modelo: "Mustang",
+            cor: "vermelhor",
+            ano: 2023,
+
+            dirigir: function () {
+                console.log("Você dirige o carro")
+            },
+
+            freiar: function () {
+                console.log("Você pisou nos freios")
+            }
+        }
+
+        const carro2 = {
+            modelo: "Corvette",
+            cor: "Yellow",
+            ano: 2024,
+
+            dirigir: function () {
+                console.log("Você dirige o carro")
+            },
+
+            freiar: function () {
+                console.log("Você pisou nos freios")
+            }
+        }
+
+        // Chamando propriedades e métodos do carro 1
+        console.log(carro1.modelo);
+        console.log(carro1.cor);
+        console.log(carro1.ano);
+        carro1.dirigir();
+        carro1.freiar();
+
+        console.log("-=-=-=-=-=-=-=-=-=-=-=-=-")
+
+        // Chamando propriedades e métodos do carro 2
+        console.log(carro2.modelo);
+        console.log(carro2.cor);
+        console.log(carro2.ano);
+        carro2.dirigir();
+        carro2.freiar();
+
+    </script>
+</body>

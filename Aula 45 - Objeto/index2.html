@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const carro = {
+            modelo: "Mustang",
+            cor: "vermelhor",
+            ano: 2023,
+
+            dirigir: function () {
+                console.log("Você dirige o carro")
+            },
+
+            freiar: function () {
+                console.log("Você pisou nos freios")
+            }
+        }
+
+        // Chamando as propriedades do carro
+        console.log(carro.modelo);
+        console.log(carro.cor);
+        console.log(carro.ano);
+
+        // Chamando os métodos do objeto
+        carro.dirigir();
+        carro.freiar();
+    </script>
+</body>
+
+</html>
