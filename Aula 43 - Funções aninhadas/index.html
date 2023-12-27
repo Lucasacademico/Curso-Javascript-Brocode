@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Uma função aninhada em JavaScript é uma função definida dentro de outra função, também conhecida como uma função interna ou função dentro de uma função. Isso significa que você está criando uma função dentro do escopo de outra função. -->
+    <script>
+        let usuario = "Lucas"
+        let caixaDeEntrada = 0;
+
+        login();
+
+        // Função recebendo duas funções externas
+        function login(){
+            displayUsuario();
+            displayCaixaDeEntrada();
+        }
+
+        function displayUsuario(){
+            console.log(`Bem vindo(a) ${usuario}`)
+        }
+
+        function displayCaixaDeEntrada(){
+            console.log(`Você tem ${caixaDeEntrada} novas mensagens!`)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let usuario = "Lucas"
+        let caixaDeEntrada = 0;
+
+        login();
+
+        // Tentando chamar as funções internas erro ocorre.
+        displayUsuario();
+        displayCaixaDeEntrada();
+
+        // Função com duas funções internamente
+        function login() {
+
+            displayUsuario();
+            displayCaixaDeEntrada();
+
+            function displayUsuario() {
+                console.log(`Bem vindo(a) ${usuario}`)
+            }
+
+            function displayCaixaDeEntrada() {
+                console.log(`Você tem ${caixaDeEntrada} novas mensagens!`)
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
