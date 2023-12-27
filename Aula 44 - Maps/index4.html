@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const loja = new Map([
+            ["camisa", 49],
+            ["jeans", 70],
+            ["meias", 15],
+            ["cuecas", 25]
+        ]);
+
+        loja.set("chapeu", 35)
+
+        // Deletando um valor do map loja
+        loja.delete("jeans")
+
+        // Verificando se o map possui um determinado valor/chave
+        console.log(loja.has("jeans")) //false
+        console.log(loja.has("meias")) //true   
+
+        // Verificando o tamanho do map
+        console.log(loja.size)
+
+        loja.forEach((value, key) => console.log(`${key} $${value}`))
+
+    </script>
+</body>
+
+</html>

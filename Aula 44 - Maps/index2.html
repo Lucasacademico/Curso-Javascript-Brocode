@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const loja = new Map([
+            ["camisa", 49],
+            ["jeans", 70],
+            ["meias", 15],
+            ["cuecas", 25]
+        ]);
+
+        // Realizando somatória dos valores dos itens da loja
+        let carrinho = 0
+        carrinho += loja.get("camisa")
+        carrinho += loja.get("jeans")
+        console.log(carrinho)
+
+    </script>
+</body>
+
+</html>

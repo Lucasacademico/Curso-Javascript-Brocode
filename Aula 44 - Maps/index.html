@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Em JavaScript, Map é uma estrutura de dados que permite armazenar pares de chave/valor, onde tanto a chave quanto o valor podem ser de qualquer tipo, incluindo objetos, funções ou tipos primitivos. Ao contrário dos objetos JavaScript regulares (que têm apenas strings e símbolos como chaves), os Maps permitem usar qualquer valor, seja ele um objeto, função, número, string ou até mesmo outro Map. -->
+    <script>
+        //Objeto mapa simples de chaves/valores
+        const store = new Map([
+            ["camisa", 49],
+            ["jeans", 70],
+            ["meias", 15],
+            ["cuecas", 25]
+        ]);
+
+        // Imprimindo o map usando forEach com callback
+        store.forEach((value, key) => console.log(`${key} $${value}`))
+    </script>
+</body>
+
+</html>
