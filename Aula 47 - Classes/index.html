@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Classes em JavaScript são uma forma de organizar e criar objetos com estruturas similares. Elas são um tipo de "modelo" ou "plano de fundo" a partir do qual você pode criar objetos com propriedades e métodos específicos. -->
+    <script>
+        // Classe simples
+        class jogador {
+            pontuacao = 0;
+
+            pause() {
+                console.log("Você pausou o jogo")
+            }
+
+            exit() {
+                console.log("Você saiu do jogo")
+            }
+        }
+
+        // Objeto para usar a classe
+        const jogador1 = new jogador();
+
+        // Invocando método da classe no objeto
+        console.log(jogador1.pontuacao)
+
+        // Adicionando 1 ponto para a pontuação
+        jogador1.pontuacao += 1
+        console.log(jogador1.pontuacao)
+
+        // Chamando o método de pausa e exit
+        jogador1.pause();
+        jogador1.exit();
+
+    </script>
+</body>
+
+</html>

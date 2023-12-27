@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class jogador {
+            pontuacao = 0;
+
+            pause() {
+                console.log("Você pausou o jogo")
+            }
+
+            exit() {
+                console.log("Você saiu do jogo")
+            }
+        }
+
+        // Podemos chamar mais de objeto sobre a classe
+        const jogador1 = new jogador();
+        const jogador2 = new jogador();
+
+        jogador1.pontuacao += 10
+        jogador2.pontuacao += 8
+
+        console.log(`Pontuação Jogador 1: ${jogador1.pontuacao}pts`)
+        console.log(`Pontuação Jogador 2: ${jogador2.pontuacao}pts`)
+
+        jogador1.pause();
+        jogador2.exit();
+
+
+    </script>
+</body>
+
+</html>
