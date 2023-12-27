@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- A palavra-chave this em JavaScript é uma referência especial que é automaticamente definida em todos os contextos de execução. Ela se refere ao objeto ao qual uma função pertence ou ao contexto no qual está sendo chamada no momento. -->
+
+    <script>
+
+        const carro1 = {
+            modelo: "Mustang",
+            cor: "vermelhor",
+            ano: 2023,
+
+            // Usando o 'this' no método para podermos usar o valor da chave modelo.
+            dirigir: function () {
+                console.log(`Você dirige o ${this.modelo}`)
+            }
+        }
+
+        const carro2 = {
+            modelo: "Corvette",
+            cor: "Yellow",
+            ano: 2024,
+
+            dirigir: function () {
+                console.log(`Você dirige o ${carro2.modelo}`)
+            }
+        }
+
+        carro1.dirigir();
+        carro2.dirigir();
+
+        // Usar o this fora de um contexto de funções ou objetos, mostra as propriedades da 'window' que é a janela do navegador.
+        console.log(this)
+
+        // Podemos também atribuir uma propriedade diretamente a janela, assim como acessá-la
+        this.name = "JanelaTop"
+        console.log(this.name)
+
+    </script>
+</body>
+
+</html>
