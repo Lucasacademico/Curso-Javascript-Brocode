@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Carro {
+
+            // Váriavel para contar a quantidade de carros
+            numDeCarros = 0
+
+            constructor(modelo) {
+                this.modelo = modelo
+                // Alterado 'this' para o nome da classe para tentar contar todos os objetos
+                Carro.numDeCarros += 1
+            }
+        }
+
+        //Objetos carros criados
+        const carro1 = new Carro("Mustang")
+        const carro2 = new Carro("Ferrari")
+        const carro3 = new Carro("Lambo")
+
+        // tentando chamar o total de numeros de carros
+        console.log(Carro.numDeCarros)
+        // Saída "NAN" pois 'numDeCarros = 0' não é estático
+
+    </script>
+</body>
+
+</html>

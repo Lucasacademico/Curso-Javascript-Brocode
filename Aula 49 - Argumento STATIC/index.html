@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+Em JavaScript, a palavra-chave static é usada para criar membros estáticos em classes. Membros estáticos são propriedades ou métodos que pertencem à própria classe, em vez de pertencerem a instâncias individuais da classe.
+Membros Estáticos: São acessados diretamente na classe, sem precisar criar uma instância da classe. 
+Ao usar static, você pode acessar o método e a propriedade diretamente na classe, sem precisar criar um objeto.
+Isso é útil quando você tem funcionalidades que não dependem do estado de uma instância específica da classe, mas estão relacionadas à classe em si. Os membros estáticos podem ser usados para utilitários, constantes ou métodos que são comuns a todas as instâncias da classe e não precisam de acesso a dados específicos de uma 
+-->
+
+    <script>
+        class Exemplo {
+            static metodoEstatico() {
+                console.log("Este é um método estático.");
+            }
+
+            static propriedadeEstatica = "Esta é uma propriedade estática.";
+        }
+
+        Exemplo.metodoEstatico(); // Chamada do método estático diretamente na classe
+        console.log(Exemplo.propriedadeEstatica); // Acesso à propriedade estática diretamente na classe
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Carro {
+
+            // transformado variavel para contar a quantidade de carros em STATIC
+            static numDeCarros = 0
+            constructor(modelo) {
+                this.modelo = modelo
+                Carro.numDeCarros += 1
+            }
+        }
+
+        const carro1 = new Carro("Mustang")
+        const carro2 = new Carro("Ferrari")
+        const carro3 = new Carro("Lambo")
+
+        // Devido transformarmos a var 'numDeCarros' em static, conseguimos contar os objetos/carros
+        console.log(Carro.numDeCarros)
+
+
+    </script>
+</body>
+
+</html>

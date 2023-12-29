@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Classe carro
+        class Carro {
+
+            // Variavel para contar a quantidade de carros
+            numDeCarros = 0
+            constructor(modelo) {
+                this.modelo = modelo
+                this.numDeCarros += 1
+            }
+        }
+
+        //Objetos carros criados
+        const carro1 = new Carro("Mustang")
+        const carro2 = new Carro("Ferrari")
+        const carro3 = new Carro("Lambo")
+
+        // Chamada da propriedade que conta a quantidade de carros 
+        console.log(carro1.numDeCarros)
+        console.log(carro2.numDeCarros)
+        console.log(carro3.numDeCarros)
+        //OBS: Cada 1 fica com '1' carro, pois estão contando SOMENTE para os seus objetos.
+
+    </script>
+</body>
+
+</html>

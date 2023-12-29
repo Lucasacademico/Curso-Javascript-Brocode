@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Carro {
+
+            static numDeCarros = 0
+            constructor(modelo) {
+                this.modelo = modelo
+                Carro.numDeCarros += 1
+            }
+
+            // Criado método estático para contagem regressiva
+            // Foi criado estático pois caso não fosse, iria contar para cada carro separadamente.
+            // Deste modo a contagem ocorre diretamente pra toda classe 'Carro'
+            static comecarCorrida() {
+                console.log("3...2...1...GO!")
+            }
+        }
+
+        const carro1 = new Carro("Mustang")
+        const carro2 = new Carro("Ferrari")
+        const carro3 = new Carro("Lambo")
+
+        // Devido transformarmos a var 'numDeCarros' em static, conseguimos contar os objetos/carros
+        console.log(Carro.numDeCarros)
+
+        // Chamada do método 'comecarCorrida()' pela classe 'Carro'
+        Carro.comecarCorrida();
+
+    </script>
+</body>
+
+</html>
