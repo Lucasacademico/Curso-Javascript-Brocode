@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Estudante {
+            constructor(nome, idade, gpa) {
+                this.nome = nome;
+                this.idade = idade;
+                this.gpa = gpa;
+            }
+
+            estudar() {
+                console.log(`${this.nome} está estudando`);
+            }
+        }
+
+        const estudante1 = new Estudante("Bob Esponja", 30, 3.2);
+        const estudante2 = new Estudante("Patrick", 35, 1.5)
+        const estudante3 = new Estudante("Sandy", 27, 4.0)
+
+        // Imprimindo os objetos com seus atributos
+        console.log(estudante1)
+        console.log(estudante2)
+        console.log(estudante3)
+
+        // Imprimindo atributos,  e método do estudante1
+        console.log(estudante1.nome);
+        console.log(estudante1.idade);
+        console.log(estudante1.gpa);
+        estudante1.estudar();
+
+        // Imprimindo atributos,  e método do estudante2
+        console.log(estudante2.nome);
+        console.log(estudante2.idade);
+        console.log(estudante2.gpa);
+        estudante2.estudar();
+
+        // Imprimindo atributos,  e método do estudante3
+        console.log(estudante3.nome);
+        console.log(estudante3.idade);
+        console.log(estudante3.gpa);
+        estudante3.estudar();
+
+
+
+
+
+    </script>
+</body>
+
+</html>

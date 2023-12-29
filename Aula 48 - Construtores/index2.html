@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Estudante {
+            constructor(nome, idade, gpa) {
+                this.nome = nome;
+                this.idade = idade;
+                this.gpa = gpa;
+            }
+
+            estudar() {
+                console.log(`${this.nome} está estudando`);
+            }
+        }
+
+        const estudante1 = new Estudante("Bob Esponja", 30, 3.2);
+
+        // Imprimindo os atributos do objeto estudante1
+        console.log(estudante1.nome); // Imprime o nome do estudante1
+        console.log(estudante1.idade); // Imprime a idade do estudante1
+        console.log(estudante1.gpa); // Imprime o GPA do estudante1
+
+    </script>
+</body>
+
+</html>

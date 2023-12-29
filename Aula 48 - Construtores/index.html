@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Estudante {
+            // Constructor inicializa os objetos da classe
+            constructor(nome, idade, gpa) {
+                // Atribuição dos parâmetros aos atributos do objeto
+                this.nome = nome;
+                this.idade = idade;
+                this.gpa = gpa;
+            }
+
+            estudar() {
+                // Método que exibe uma mensagem indicando que o estudante está estudando
+                console.log(`${this.nome} está estudando`);
+            }
+        }
+
+        // Criação de um objeto Estudante chamado estudante1 com valores específicos
+        const estudante1 = new Estudante("Bob Esponja", 30, 3.2);
+
+        // Imprimindo o objeto estudante1
+        console.log(estudante1)
+
+        // Invocando o método 'estudar()'
+        estudante1.estudar();
+
+    </script>
+</body>
+
+</html>
