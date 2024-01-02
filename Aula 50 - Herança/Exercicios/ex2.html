@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Exercício 2: Veículos
+Crie uma hierarquia de veículos. Defina uma classe base Veiculo com propriedades gerais (por exemplo, número de rodas, cor) e métodos (por exemplo, ligar, desligar). Em seguida, crie classes filhas para tipos específicos de veículos, como Carro, Moto, Caminhão, cada um com suas propriedades e métodos próprios, além de herdar funcionalidades da classe Veiculo.
+     -->
+
+    <script>
+        class Veiculo {
+
+            constructor(veiculo, cor, tipo) {
+                this.veiculo = veiculo
+                this.cor = cor
+                this.tipo = tipo
+            }
+
+            ligar() {
+                console.log(`O(A) ${this.veiculo} ${this.cor} ligou`)
+            }
+
+            desligar() {
+                console.log(`O(A) ${this.veiculo} ${this.cor} desligou`)
+            }
+        }
+
+        class Carro extends Veiculo {
+
+            constructor(veiculo, cor, tipo) {
+                super(veiculo, cor, tipo)
+                this.rodas = "4-rodas";
+            }
+
+            drift() {
+                console.log(`O ${this.veiculo} ${this.cor} é um ${this.tipo} de ${this.rodas} e esta realizando um drift insano!!`)
+            }
+        }
+        class Moto extends Veiculo {
+
+            constructor(veiculo, cor, tipo) {
+                super(veiculo, cor, tipo)
+                this.rodas = "2-rodas";
+            }
+
+            grau() {
+                console.log(`A ${this.veiculo} ${this.cor} é uma ${this.tipo} de ${this.rodas} e esta realizando um grau insano!!`)
+            }
+        }
+
+        class Aviao extends Veiculo {
+
+            constructor(veiculo, cor, tipo) {
+                super(veiculo, cor, tipo)
+                this.asa = "Alta";
+            }
+
+            spin() {
+                console.log(`O ${this.veiculo} ${this.cor} é um ${this.tipo} de asa ${this.asa} e esta realizando um spin insano!!`)
+            }
+        }
+
+        const carro = new Carro("Carro", "Vermelho", "Automóvel")
+        const moto = new Moto("Moto", "Cinza", "Motocicleta")
+        const aviao = new Aviao("Avião", "Branco", "Aeronave")
+
+        // Saida Carro
+        carro.ligar()
+        carro.drift()
+        carro.desligar()
+
+        // Saida Moto
+        moto.ligar()
+        moto.grau()
+        moto.desligar()
+
+        // Saida Avião
+        aviao.ligar()
+        aviao.spin()
+        aviao.desligar()
+    </script>
+</body>
+
+</html>

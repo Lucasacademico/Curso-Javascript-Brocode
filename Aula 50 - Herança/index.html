@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- A herança refere-se à capacidade de um objeto herdar propriedades e métodos de outro objeto. A herança é alcançada através de protótipos, que é um dos principais mecanismos de herança em JavaScript. -->
+    <script>
+        // Neste exemplo temos 3 classes com a mesma estrutura, e percebemos que tomam bastante espaço para praticamente a mesma função.
+        // Percebemos também que todas tem em comum o 'vivo' e os métodos 'comer' e 'dormir'
+        // A seguir criaremos uma classe 'pai' que vai conter todos os métodos e propriedades que estes animais vão herdar.
+        class Coelho {
+            vivo = true;
+            nome = "coelho";
+
+            comer() {
+                console.log(`Este ${this.nome} esta comendo`)
+            }
+            dormir() {
+                console.log(`Este ${this.nome} esta dormindo `)
+            }
+            correr() {
+                console.log(`Este ${this.nome} esta correndo `)
+            }
+        }
+
+        class Peixe {
+            vivo = true;
+            nome = "peixe";
+
+            comer() {
+                console.log(`Este ${this.nome} esta comendo`)
+            }
+            dormir() {
+                console.log(`Este ${this.nome} esta dormindo `)
+            }
+            nadar() {
+                console.log(`Este ${this.nome} esta nadando `)
+            }
+        }
+
+        class Gavião {
+            vivo = true;
+            nome = "gavião";
+
+            comer() {
+                console.log(`Este ${this.nome} esta comendo`)
+            }
+            dormir() {
+                console.log(`Este ${this.nome} esta dormindo `)
+            }
+            voar() {
+                console.log(`Este ${this.nome} esta voando `)
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Exercício 4: Funcionários
+Crie uma hierarquia de funcionários de uma empresa. Defina uma classe base Funcionario com propriedades como nome, cargo e salário, além de métodos relacionados a tarefas comuns a todos os funcionários. Em seguida, crie classes filhas para tipos específicos de funcionários, como Gerente, Desenvolvedor, Designer, cada um com suas próprias propriedades e métodos relacionados ao cargo específico. -->
+
+    <script>
+        class Funcionario {
+
+            constructor(nome, cargo, salario) {
+                this.nome = nome
+                this.cargo = cargo
+                this.salario = salario
+            }
+
+            dadosFuncionario() {
+                console.log(`O(A) Funcionário(a) ${this.nome} possui o cargo de ${this.cargo} e salário de R$ ${this.salario}`)
+            }
+
+            chegada() {
+                console.log(`${this.nome} bateu o ponto de entrada`)
+            }
+
+            saida() {
+                console.log(`${this.nome} bateu o ponto de saída`)
+            }
+
+            recebeSalario() {
+                console.log(`Salario de R$ ${this.salario} acabou de cair na conta do ${this.nome}`)
+            }
+
+        }
+
+        class Gerente extends Funcionario {
+
+            constructor(nome, cargo, salario, tarefa) {
+                super(nome, cargo, salario)
+                this.tarefa = tarefa
+            }
+
+            projetos() {
+                console.log(`O ${this.cargo} ${this.nome} está realizando sua tarefa diária de ${this.tarefa}`)
+            }
+
+        }
+
+        class Desenvolvedor extends Funcionario {
+
+            constructor(nome, cargo, salario, tarefa) {
+                super(nome, cargo, salario)
+                this.tarefa = tarefa
+            }
+
+            desenvolver() {
+                console.log(`O ${this.cargo} ${this.nome} está realizando sua tarefa diária de ${this.tarefa}`)
+            }
+
+        }
+
+        // Objetos
+        const gerente = new Gerente("Lucas", "Gerente de projetos", 6503.34, "Gerenciar projetos de desenvolvimento mobile")
+        const desenvolvedor = new Desenvolvedor("Jubileu", "Desenvolvedor Pleno", 5240.75, "Desenvolver aplicativos mobile")
+
+        // Saída GErente
+        gerente.chegada()
+        gerente.projetos()
+        gerente.saida()
+        gerente.recebeSalario()
+
+        // Saída GErente
+        desenvolvedor.chegada()
+        desenvolvedor.desenvolver()
+        desenvolvedor.saida()
+        desenvolvedor.recebeSalario()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Exercício 1: Hierarquia de Animais
+Crie uma hierarquia de animais usando herança em JavaScript. Defina uma classe base Animal e classes filhas para tipos específicos de animais, como Cachorro, Gato, Pássaro, etc. Cada classe deve ter métodos e propriedades específicos, além de herdar propriedades e métodos da classe Animal.
+     -->
+    <script>
+        class Animal {
+
+            constructor(animal, idade, tipo) {
+                this.animal = animal
+                this.idade = idade
+                this.tipo = tipo
+            }
+
+
+            comer() {
+                console.log(`O ${this.animal} esta comendo`)
+            }
+
+            dormir() {
+                console.log(`O ${this.animal} esta dormindo`)
+            }
+
+        }
+
+        class Cachorro extends Animal {
+            constructor(animal, idade, tipo) {
+                super(animal, idade, tipo); // Chama o construtor da classe pai (Animal)
+                this.raca = "Pitbull"
+            }
+
+            late() {
+                console.log(`O ${this.animal} da raça ${this.raca} está latindo`);
+            }
+        }
+
+        class Gato extends Animal {
+            constructor(animal, idade, tipo) {
+                super(animal, idade, tipo);
+                this.corPele = "Malhado"
+            }
+
+            miar() {
+                console.log(`O ${this.animal} de cor ${this.corPele} está miando`)
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor(animal, idade, tipo) {
+                super(animal, idade, tipo);
+                this.tipoAsa = "Curta"
+            }
+
+            voar() {
+                console.log(`O ${this.animal} de asa ${this.tipoAsa} está voando`)
+            }
+        }
+
+        const cachorro1 = new Cachorro("Cachorro", 10, "Mamifero");
+        const gato1 = new Gato("Gato", 5, "Mamifero");
+        const passaro1 = new Passaro("Passaro", 2, "Onivoro")
+
+        // Saida cachorro
+        console.log(cachorro1.animal);
+        console.log(cachorro1.raca);
+        console.log(cachorro1.idade);
+        console.log(cachorro1.tipo);
+        cachorro1.comer();
+        cachorro1.dormir();
+        cachorro1.late();
+
+        // Saída Gato
+        console.log(gato1.animal);
+        console.log(gato1.corPele);
+        console.log(gato1.idade);
+        console.log(gato1.tipo);
+        gato1.comer();
+        gato1.dormir();
+        gato1.miar();
+
+        // Saída Passaro
+        console.log(passaro1.animal);
+        console.log(passaro1.tipoAsa);
+        console.log(passaro1.idade);
+        console.log(passaro1.tipo);
+        passaro1.comer();
+        passaro1.dormir();
+        passaro1.voar();
+    </script>
+</body>
+
+</html>

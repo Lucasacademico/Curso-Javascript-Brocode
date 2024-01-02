@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Exercício 5: Produtos e Categorias
+Crie uma hierarquia de produtos e categorias. Defina uma classe base Produto com propriedades como nome, preço e métodos para calcular desconto. Em seguida, crie classes filhas para tipos específicos de produtos, como Eletrônico, Roupa, Alimento, e crie uma classe Categoria para agrupar produtos semelhantes.
+     -->
+    <script>
+        class Produto {
+            constructor(nome, preco) {
+                this.nome = nome
+                this.preco = preco
+            }
+
+            descricao() {
+                console.log(`O ${this.nome} esta custando R$ ${this.preco}`)
+            }
+        }
+
+        class Eletronico extends Produto {
+
+            constructor(nome, preco, categoria) {
+                super(nome, preco)
+                this.categoria = categoria
+                this.desconto = preco - ((10 / 100) * preco)
+            }
+
+            tipo() {
+                console.log(`O ${this.nome} esta na categoria de ${this.categoria}`)
+            }
+
+            descontoEletronico() {
+                console.log(`O ${this.nome} possui 10% de desconto, e seu valor fica em ${this.desconto}`)
+            }
+
+        }
+
+        const televisao = new Eletronico("Televisão", 1199.99, "Eletrônico")
+
+        // Saída eletronico
+        televisao.descricao()
+        televisao.tipo()
+        televisao.descontoEletronico()
+
+
+    </script>
+</body>
+
+</html>

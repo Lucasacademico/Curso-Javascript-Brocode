@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Exercício 3: Geometria
+Crie uma hierarquia de formas geométricas. Defina uma classe base Forma com métodos para calcular a área e o perímetro. Em seguida, crie classes filhas para formas específicas, como Retângulo, Círculo, Triângulo, cada uma com seus próprios métodos para calcular área e perímetro de acordo com suas características específicas.
+     -->
+
+    <script>
+        class FormaGeometrica {
+            constructor(forma) {
+                this.nome = forma
+            }
+
+            nomeForma() {
+                console.log(`A forma que estamos calculando é ${this.nome}`)
+            }
+        }
+
+        class Circulo extends FormaGeometrica {
+            constructor(forma, raio) {
+                super(forma)
+                this.pi = 3.14159
+                this.raio = raio
+                this.area = (this.pi * Math.pow(this.raio, 2))
+                this.perimetro = ((2 * this.pi) * this.raio)
+            }
+
+            calculaArea() {
+                console.log(`O ${this.nome} possui ${this.raio} de raio e àrea de ${this.area}`)
+            }
+
+            calculaPerimetro() {
+                console.log(`O perímetro do ${this.nome} é ${this.perimetro}`)
+            }
+        }
+
+        class Quadrado extends FormaGeometrica {
+
+            constructor(forma, lado) {
+                super(forma)
+                this.lado = lado
+                this.area = Math.pow(lado, 2)
+            }
+
+            calculaArea() {
+                console.log(`O ${this.nome} possui um lado de ${this.lado} e àrea de ${this.area}`)
+            }
+
+        }
+
+        class Triangulo extends FormaGeometrica {
+
+            constructor(forma, base, altura) {
+                super(forma)
+                this.base = base
+                this.altura = altura
+                this.area = (base * altura) / 2
+            }
+
+            calculaArea() {
+                console.log(`O ${this.nome} possui base de ${this.base} e altura de ${this.altura}, seua àrea é  ${this.area}`)
+            }
+        }
+
+
+
+        const circulo = new Circulo("Circulo", 5.5)
+        const quadrado = new Quadrado("Quadrado", 3.5)
+        const triangulo = new Triangulo("Triângulo", 5, 8)
+
+        //Circulo
+        circulo.nomeForma()
+        circulo.calculaArea()
+        circulo.calculaPerimetro()
+
+        //Quadrado
+        quadrado.nomeForma()
+        quadrado.calculaArea()
+
+        //Triangulo
+        triangulo.nomeForma()
+        triangulo.calculaArea()
+
+    </script>
+</body>
+
+</html>

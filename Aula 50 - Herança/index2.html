@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Classe Pai
+        class Animal {
+
+            vivo = true;
+
+            comer() {
+                console.log(`Este ${this.nome} esta comendo`)
+            }
+            dormir() {
+                console.log(`Este ${this.nome} esta dormindo `)
+            }
+
+        }
+
+        //-=-=-=-=- Classes filhos-=-=-=-=-
+        class Coelho extends Animal {
+
+            nome = "coelho";
+
+            correr() {
+                console.log(`Este ${this.nome} esta correndo `)
+            }
+        }
+
+        class Peixe extends Animal {
+
+            nome = "peixe";
+
+            nadar() {
+                console.log(`Este ${this.nome} esta nadando `)
+            }
+        }
+
+        class Gaviao extends Animal {
+
+            nome = "gaviao";
+
+            voar() {
+                console.log(`Este ${this.nome} esta voando `)
+            }
+        }
+
+        const coelho = new Coelho();
+        const peixe = new Peixe();
+        const gaviao = new Gaviao();
+
+        // Classe 'Coelho'recebendo os atributos e métodos da classe 'Animal'
+        console.log(coelho.vivo)
+        coelho.comer();
+        coelho.dormir();
+        coelho.correr(); // Exclusivo do 'Coelho'
+
+        // Classe 'Peixe'recebendo os atributos e métodos da classe 'Animal'
+        console.log(peixe.vivo)
+        peixe.comer();
+        peixe.dormir();
+        peixe.nadar(); // Exclusivo do 'Peixe'
+
+        // Classe 'Gaviao'recebendo os atributos e métodos da classe 'Animal'
+        console.log(gaviao.vivo)
+        gaviao.comer();
+        gaviao.dormir();
+        gaviao.voar(); // Exclusivo do 'Gaviao'
+
+    </script>
+</body>
+
+</html>
