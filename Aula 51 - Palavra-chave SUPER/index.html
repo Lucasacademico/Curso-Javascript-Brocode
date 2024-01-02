@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- O uso de super é fundamental quando se trabalha com herança em classes, garantindo que as propriedades e métodos da classe pai sejam corretamente acessados ou inicializados na classe filha. -->
+    <script>
+        //
+        class Produto {
+            constructor(nome, preco) {
+                this.nome = nome
+                this.preco = preco
+            }
+
+            descricao() {
+                console.log(`O ${this.nome} esta custando R$ ${this.preco}`)
+            }
+        }
+
+        class Eletronico extends Produto {
+
+            constructor(nome, preco, categoria) {
+                // Super possibilita que eu não tenha que repetir as variaveis da classe pai, apenas inserir dentro da chave super já tráz as variaveis
+                super(nome, preco)
+                this.categoria = categoria
+                this.desconto = preco - ((10 / 100) * preco)
+            }
+
+            tipo() {
+                console.log(`O ${this.nome} esta na categoria de ${this.categoria}`)
+            }
+
+            descontoEletronico() {
+                console.log(`O ${this.nome} possui 10% de desconto, e seu valor fica em ${this.desconto}`)
+            }
+
+        }
+
+        const televisao = new Eletronico("Televisão", 1199.99, "Eletrônico")
+        televisao.descricao()
+        televisao.tipo()
+        televisao.descontoEletronico()
+    </script>
+</body>
+
+</html>
