@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Getter: Um getter é um método que permite acessar o valor de uma propriedade de um objeto. Ele é utilizado para retornar o valor da propriedade e é invocado quando essa propriedade é lida.
+
+        Setter: Um setter é um método que permite atribuir um valor a uma propriedade de um objeto. Ele é utilizado para definir o valor de uma propriedade e é invocado quando essa propriedade é modificada.
+     -->
+    <script>
+        // Exemplo padrão de acesso de propriedade do construtor sem gets e sets
+        class Retangulo {
+
+            constructor(largura, altura) {
+                this.largura = largura;
+                this.altura = altura;
+            }
+
+        }
+
+        const retangulo = new Retangulo(-100000, "pizza")
+
+        console.log(retangulo.largura)
+        console.log(retangulo.altura)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Retangulo {
+
+            constructor(largura, altura) {
+                this.largura = largura;
+                this.altura = altura;
+            }
+
+            // SET Largura
+            set largura(novaLargura) {
+                if (novaLargura > 0) {
+                    this._largura = novaLargura
+                }
+                else {
+                    console.log("Largura deve ser um número positivo!")
+                }   
+            }
+
+            // SET Altura
+            set altura(novaAltura) {
+                if (novaAltura > 0) {
+                    this._altura = novaAltura
+                }
+                else {
+                    console.log("Altura deve ser um número positivo!")
+                }
+            }
+
+        }
+
+        const retangulo = new Retangulo(-100000, "pizza")
+
+        console.log(retangulo.largura)
+        console.log(retangulo.altura)
+    </script>
+</body>
+
+</html>
