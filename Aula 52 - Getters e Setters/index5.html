@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Pessoa {
+
+            constructor(primeiroNome, ultimoNome, idade) {
+                this.primeiroNome = primeiroNome;
+                this.ultimoNome = ultimoNome;
+                this.idade = idade
+            }
+
+            set primeiroNome(novoPrimeiroNome) {
+                if (typeof novoPrimeiroNome === 'string' && novoPrimeiroNome.length > 0) {
+                    this._primeiroNome = novoPrimeiroNome
+                }
+                else {
+                    console.error("Primeiro nome deve ser uma string não-vázia")
+                }
+            }
+
+            set ultimoNome(novoUltimoNome) {
+                if (typeof novoUltimoNome === 'string' && novoUltimoNome.length > 0) {
+                    this._ultimoNome = novoUltimoNome
+                }
+                else {
+                    console.error("Sobrenome deve ser uma string não-vázia")
+                }
+            }
+
+            set idade(novaIdade) {
+                if (typeof novaIdade === "number" && novaIdade >= 0) {
+                    this._idade = novaIdade;
+                }
+                else {
+                    console.error("Idade deve ser um número não-negativo")
+                }
+            }
+
+            get primeiroNome() {
+                return this._primeiroNome
+            }
+
+            get ultimoNome() {
+                return this._ultimoNome
+            }
+
+            get nomeCompleto() {
+                return this._primeiroNome + " " + this._ultimoNome;
+            }
+
+            get idade() {
+                return this._idade
+            }
+
+        }
+
+        const pessoa = new Pessoa("Jubi", "Leu", 22)
+
+        console.log(pessoa.primeiroNome)
+        console.log(pessoa.ultimoNome)
+        console.log(pessoa.idade)
+        console.log(pessoa.nomeCompleto)
+    </script>
+</body>
+
+</html>

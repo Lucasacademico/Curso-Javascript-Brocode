@@ -9,7 +9,7 @@
 
 <body>
     <!-- 
-        um "setter" é usado para atribuir um valor a essa propriedade. Isso é útil quando você deseja realizar alguma lógica ou validação antes de atribuir um novo valor a uma propriedade de um objeto.
+        Um "getter" em JavaScript é um método que permite acessar o valor de uma propriedade de um objeto. Enquanto um "setter" é usado para atribuir um valor a uma propriedade, um "getter" é usado para obter o valor dessa propriedade, possivelmente realizando algum processamento adicional antes de devolver esse valor.
      -->
     <script>
         class Retangulo {
@@ -19,7 +19,6 @@
                 this.altura = altura;
             }
 
-            // SET Largura
             set largura(novaLargura) {
                 if (novaLargura > 0) {
                     this._largura = novaLargura
@@ -29,7 +28,6 @@
                 }
             }
 
-            // SET Altura
             set altura(novaAltura) {
                 if (novaAltura > 0) {
                     this._altura = novaAltura
@@ -39,9 +37,23 @@
                 }
             }
 
+            // get da largura
+            get largura() {
+                return this._largura;
+            }
+
+            //get da altura
+            get altura() {
+                return this._altura
+            }
+
         }
 
-        const retangulo = new Retangulo(-100000, "pizza")
+        const retangulo = new Retangulo(33, 44)
+
+        retangulo.altura = -100
+        retangulo.largura = "asdfasf"
+
 
         console.log(retangulo.largura)
         console.log(retangulo.altura)
