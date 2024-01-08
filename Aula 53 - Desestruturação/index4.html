@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Exemplo 4 - Extraindo valores de objetos
+        const pessoa1 = {
+            primeiroNome: "BobEspoja",
+            sobrenome: "Calça-Quadrada",
+            idade: 30,
+            profissao: "Cozinheiro"
+        }
+
+        const pessoa2 = {
+            primeiroNome: "Patrick",
+            sobrenome: "Estrela",
+            idade: 34
+        }
+
+        // const { primeiroNome, sobrenome, idade, profissao } = pessoa1;
+
+        const { primeiroNome, sobrenome, idade, profissao = "Desempregado" } = pessoa2;
+
+
+
+        console.log(primeiroNome)
+        console.log(sobrenome)
+        console.log(idade)
+        console.log(profissao)
+
+
+    </script>
+</body>
+
+</html>

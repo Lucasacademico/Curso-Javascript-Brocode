@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Designando elementos array para variaveis
+        const cores = ["vermelho", "verde", "azul", "preto", "branco"]
+
+        const [primeiraCor, segundaCor, terceiraCor, ...coresExtras] = cores
+
+        console.log(primeiraCor)
+        console.log(segundaCor)
+        console.log(terceiraCor)
+        console.log(coresExtras) // imprime o resto das cores
+
+    </script>
+</body>
+
+</html>
