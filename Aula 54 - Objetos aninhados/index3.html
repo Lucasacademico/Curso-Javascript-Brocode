@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+            Neste exemplo abaixo, a classe Endereço é invocada dentro da classe Pessoa, criamos então um objeto que invoca essa classe Endereco.
+        */
+        class Pessoa {
+
+            constructor(nome, idade, ...endereco) {
+                this.nome = nome;
+                this.idade = idade;
+                this.endereco = new Endereco(...endereco);
+            }
+
+        }
+
+        class Endereco {
+
+            constructor(rua, bairro, cidade, estado, nacao) {
+                this.rua = rua;
+                this.bairro = bairro;
+                this.cidade = cidade;
+                this.estado = estado;
+                this.nacao = nacao;
+            }
+
+        }
+
+        const pessoa1 = new Pessoa("Jubileu", 30, "Maria Eduarda", "Compensa", "Pará", "Brasil")
+        const pessoa2 = new Pessoa("Ana bébé", 29, "Ticotico", "Jesus me deu", "Amazonas", "Brasil")
+        const pessoa3 = new Pessoa("Tobias", 20, "Santa Luzia", "Ponta-Negra", "Acre", "Brasil")
+
+        console.log(pessoa1.endereco)
+        console.log(pessoa1.endereco.bairro)
+
+    </script>
+</body>
+
+</html>

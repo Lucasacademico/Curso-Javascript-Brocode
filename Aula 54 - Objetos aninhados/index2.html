@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Objeto pessoa
+        const pessoa = {
+            nomeCompleto: "Bob Esponja Calça-Quadrada",
+            idade: 30,
+            estudante: true,
+            hobbies: ["karate", "aguaviva", "cozinhar"],
+            endereco: {
+                rua: "Santa Concha, 124.",
+                cidade: "Fenda do bikini",
+                country: "Oceano"
+            }
+        }
+
+        for (const property in pessoa.endereco) {
+            console.log(pessoa.endereco[property])
+        }
+
+    </script>
+</body>
+
+</html>

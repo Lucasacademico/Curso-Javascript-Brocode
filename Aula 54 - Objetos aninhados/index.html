@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 
+    Objetos aninhados:
+    - São objetos dentro de outros objetos
+    - Permite a representação de estruturas mais complexas
+    - um 'objeto filho' é fechado sobre um 'objeto pai'
+
+    Sintaxe:
+    - Pessoa{Endereço{}, Contato{}}
+    - Carrinho{Teclado{}, Mouse{}, Monitor{}}
+ -->
+
+<body>
+    <script>
+
+        //Objeto pessoa
+        const pessoa = {
+            nomeCompleto: "Bob Esponja Calça-Quadrada",
+            idade: 30,
+            estudante: true,
+            hobbies: ["karate", "aguaviva", "cozinhar"],
+            endereco: {
+                rua: "Santa Concha, 124.",
+                cidade: "Fenda do bikini",
+                country: "Oceano"
+            }
+        }
+
+        console.log(pessoa.nomeCompleto)
+        console.log(pessoa.idade)
+        console.log(pessoa.estudante)
+        console.log(pessoa.hobbies)
+        console.log(pessoa.hobbies[0])
+        console.log(pessoa.hobbies[1])
+        console.log(pessoa.hobbies[2])
+        console.log(pessoa.endereco.rua)
+        console.log(pessoa.endereco.cidade)
+        console.log(pessoa.endereco.country)
+
+    </script>
+</body>
+
+</html>
