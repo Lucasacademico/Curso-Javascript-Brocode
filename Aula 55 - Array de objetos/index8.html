@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- O método reduce() em JavaScript é usado para reduzir os elementos de um array a um único valor. Ele executa uma função de callback em cada elemento do array, resultando em um único valor de retorno. 
+    É importante notar que reduce() é uma função poderosa e versátil, pois pode ser utilizada para realizar diversas operações de agregação ou transformação em arrays, como encontrar o maior ou menor valor, concatenar strings, entre outras tarefas onde a redução de múltiplos elementos a um único valor seja necessária.-->
+    <script>
+        const frutas = [{ nome: "maçã", cor: "vermelho", calorias: 95 },
+        { nome: "laranja", cor: "laranja", calorias: 45 },
+        { nome: "banana", cor: "amarelo", calorias: 105 },
+        { nome: "coco", cor: "branco", calorias: 159 },
+        { nome: "abacaxi", cor: "amarelo", calorias: 37 }]
+
+        // Operação ternária recebe o MAIOR valor das calorias das frutas
+        const maiorCaloriaFruta = frutas.reduce((max, fruta) => fruta.calorias > max.calorias ? fruta : max)
+
+        // Operação ternária recebe o MENOR valor das calorias das frutas
+        const menorCaloriaFruta = frutas.reduce((min, fruta) => fruta.calorias < min.calorias ? fruta : min)
+
+        console.log(maiorCaloriaFruta)
+        console.log(menorCaloriaFruta)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const frutas = [{ nome: "maçã", cor: "vermelho", calorias: 95 },
+        { nome: "laranja", cor: "laranja", calorias: 45 },
+        { nome: "banana", cor: "amarelo", calorias: 105 },
+        { nome: "coco", cor: "branco", calorias: 159 },
+        { nome: "abacaxi", cor: "amarelo", calorias: 37 }]
+
+        // Gerando variavel que recebe valores do objeto array com callback
+        const nomesFrutas = frutas.map(frutas => frutas.nome)
+        const coresFrutas = frutas.map(frutas => frutas.cor)
+        const caloriasFrutas = frutas.map(frutas => frutas.calorias)
+
+
+        // Imprimindo nova variavel com valores recebidos do objeto array
+        console.log(nomesFrutas)
+        console.log(coresFrutas)
+        console.log(caloriasFrutas)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const frutas = [{ nome: "maçã", cor: "vermelho", calorias: 95 },
+        { nome: "laranja", cor: "laranja", calorias: 45 },
+        { nome: "banana", cor: "amarelo", calorias: 105 },
+        { nome: "coco", cor: "branco", calorias: 159 },
+        { nome: "abacaxi", cor: "amarelo", calorias: 37 }]
+
+        //Remove os elementos 1 e 2 (laranja e banana) do array de objetos
+        frutas.splice(1, 2)
+
+        // Perceba que o array de 'abacaxi' foi excluido na saída
+        console.log(frutas)
+
+    </script>
+</body>
+
+</html>

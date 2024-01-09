@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const frutas = [{ nome: "maçã", cor: "vermelho", calorias: 95 },
+        { nome: "laranja", cor: "laranja", calorias: 45 },
+        { nome: "banana", cor: "amarelo", calorias: 105 },
+        { nome: "coco", cor: "branco", calorias: 159 },
+        { nome: "abacaxi", cor: "amarelo", calorias: 37 }]
+
+        // Criamos uma variavel que receberá dados do array original DESDE QUE atendam uma condicional específica
+
+        // Passa SOMENTE as frutas de cores 'amarelo' para a variavel
+        const frutasAmarelas = frutas.filter(frutas => frutas.cor === 'amarelo')
+
+        // Passa SOMENTE as frutas de 'calorias baixas' para a variavel
+        const frutasBaixaCaloria = frutas.filter(frutas => frutas.calorias < 100)
+
+        // Passa SOMENTE as frutas de 'calorias altas' para a variavel
+        const frutasAltaCaloria = frutas.filter(frutas => frutas.calorias >= 100)
+
+        console.log(frutasAmarelas)
+        console.log(frutasBaixaCaloria)
+        console.log(frutasAltaCaloria)
+
+
+    </script>
+</body>
+
+</html>

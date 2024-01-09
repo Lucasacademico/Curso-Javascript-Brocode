@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const frutas = [{ nome: "maçã", cor: "vermelho", calorias: 95 },
+        { nome: "laranja", cor: "laranja", calorias: 45 },
+        { nome: "banana", cor: "amarelo", calorias: 105 },
+        { nome: "coco", cor: "branco", calorias: 159 },
+        { nome: "abacaxi", cor: "amarelo", calorias: 37 }]
+
+        //Adicionando mais um grupo de arrays dentro do objeto frutas
+        frutas.push({ nome: "uva", cor: "roxo", calorias: 62 })
+
+        // Imprimindo array de objetos atualizado
+        console.log(frutas)
+
+        // Imprimindo o ultimo array inserido separadamente
+        console.log(frutas[5])
+        console.log(frutas[5].nome)
+        console.log(frutas[5].cor)
+        console.log(frutas[5].calorias)
+    </script>
+</body>
+
+</html>
