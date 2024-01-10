@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        setTimeout():
+        - Função em JS que permite uso de agendar a execução da função após um determinado tempo em milisegundo(ms)
+        - Tempos são apriximados (varia dependendo da carga de trabalho rodando no ambiente JS.)
+
+        Sintaxe: 
+        - setTimeout(callback, delay)
+     -->
+
+    <script>
+
+        function dizOla() {
+            window.alert("Olá");
+        }
+
+        // A mensagem aparecerá depois de 3segundos
+        setTimeout(dizOla, 3000)
+
+    </script>
+</body>
+
+</html>
