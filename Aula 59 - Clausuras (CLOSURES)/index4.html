@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createCounter() {
+
+            let cont = 0;
+
+            function incrementar() {
+                cont++;
+                console.log(`Contador aumentado para ${cont}`);
+            }
+
+            // Criamos o GET para acessar o 'cont' de fora da função
+            function getCont() {
+                return cont;
+            }
+
+            return { incrementar, getCont }
+        }
+
+        const contador = createCounter();
+
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+
+        // Agora acessamos o 'cont' graças o 'getCont'
+        console.log(`O contador está em ${contador.getCont()}`)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Clausura: 
+    - É uma função definida dentro de outra função.
+    - A função interna tem acesso das váriaveis e escopo da função externa
+    - Permite acesso e uso de variaveis privadas da função externa e manutenção do estado da variável.
+    - Usada frequentemente em frameworks de JS: React, Vue, Angular.-->
+    <script>
+        // Exemplo simples - Função 'externa' possui variavel 'mensagem' com valor 'Olá'.
+        // A função 'interna' imprime o valor da variavel 'mensagem'
+        // No final da função 'externa' chamamos a função 'interna' com 'interna()'
+        // Por ultimo, chamamos a função 'externa' fora de ambas as funções, recebendo o funcionamento tanto de 'interna' quanto 'externa'
+        function externa() {
+
+            let mensagem = "Olá";
+
+            function interna() {
+                console.log(mensagem)
+            }
+
+            interna();
+        }
+
+        externa();
+
+
+    </script>
+</body>
+
+</html>

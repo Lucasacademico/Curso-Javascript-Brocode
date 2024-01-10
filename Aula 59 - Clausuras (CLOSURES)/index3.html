@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function criaContador() {
+            let cont = 0;
+
+            function incrementar() {
+                cont++;
+                console.log(`Contador aumentou para ${cont}`);
+            }
+
+            return { incrementar };
+        }
+
+        const contador = criaContador();
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+        contador.incrementar();
+
+        // Tentando acessar a variavel 'cont' da func 'incrementar()'
+        console.log(contador.cont) // Saida indefinida, pois é inacessível.
+
+    </script>
+</body>
+
+</html>

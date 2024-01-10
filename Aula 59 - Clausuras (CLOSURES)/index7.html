@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Criamos uma função CLOSURE e passamos as variaveis e funções dentro dela
+        function criaJogo() {
+
+            let pontuacao = 0;
+
+            function aumentaPonto(pontos) {
+                pontuacao += pontos;
+                console.log(`+${pontos}pts`);
+            }
+
+            function diminuiPonto(pontos) {
+                pontuacao -= pontos;
+                console.log(`+${pontos}pts`);
+            }
+
+            function getPonto() {
+                return pontuacao;
+            }
+
+            //Retornamos um objeto com referencia à estas funções
+            return { aumentaPonto, diminuiPonto, getPonto }
+
+        }
+
+        const jogo = criaJogo();
+
+        // Chamando funções sobre o objeto criadoo
+        jogo.aumentaPonto(5);
+        jogo.diminuiPonto(2);
+        console.log(`A nota final é ${jogo.getPonto()}pts`);
+
+    </script>
+</body>
+
+</html>

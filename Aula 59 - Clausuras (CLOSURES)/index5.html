@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pontuacao = 0;
+
+        function aumentaPonto(pontos) {
+            pontuacao += pontos;
+            console.log(`+${pontos}pts`);
+        }
+
+        function diminuiPonto(pontos) {
+            pontuacao -= pontos;
+            console.log(`+${pontos}pts`);
+        }
+
+        function getPonto() {
+            return pontuacao;
+        }
+
+        // Ainda podemos alterar a 'pontuacao' externamente pois não possui um 'closure'
+
+        // Chamando funções
+        aumentaPonto(5);
+        aumentaPonto(6);
+        diminuiPonto(3);
+        diminuiPonto(2);
+        console.log(`A nota final é ${getPonto()}pts`);
+
+    </script>
+</body>
+
+</html>
